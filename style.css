@@ -1,0 +1,43 @@
+.search {
+    display: grid;
+    grid-template-areas: "logo field apps ava";
+    grid-template-rows: 90px;
+    grid-template-columns: 200px 1fr 100px 120px;
+    justify-items: center;
+}
+
+.logo {
+    width: 170px;
+    height: 100px;
+    grid-area: logo
+}
+
+.search .field {
+    grid-area: field;
+    justify-self: start;
+}
+
+.apps {
+    grid-area: apps;
+}
+
+.ava {
+    width: 50px;
+    height: 50px;
+    grid-area: ava;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.results {
+    width: 500px;
+    height: 180px;
+}
+
+.comp {
+    float: right;
+    width: 100px;
+    height: 120px;
+}
