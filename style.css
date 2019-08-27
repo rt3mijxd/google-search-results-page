@@ -1,9 +1,9 @@
-.search {
+.top {
     display: grid;
+    width: 100%;
     grid-template-areas: "logo field apps ava";
-    grid-template-rows: 90px;
-    grid-template-columns: 200px 1fr 100px 120px;
-    justify-items: center;
+    grid-template-rows: 80px;
+    grid-template-columns: 150px 1fr 100px 120px;
 }
 
 .logo {
@@ -12,32 +12,118 @@
     grid-area: logo
 }
 
-.search .field {
-    grid-area: field;
-    justify-self: start;
-}
 
 .apps {
     grid-area: apps;
 }
 
 .ava {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     grid-area: ava;
+    align-self: center;
+    justify-self: end;
 }
 
 ul li {
     display: inline-block;
 }
 
+.greenish {
+    color: green;
+} 
+
+
+
 .results {
     width: 500px;
-    height: 180px;
+}
+
+.snippet {
+    border: 1px solid grey;
+    position: relative;
+}
+
+.also {
+    display: grid;
+    grid-template-areas: "a"
+                         "b"
+                         "c"
+                         "d"
+                         "e"
+    ;
+    grid-template-rows: repeat(5, 44px);
+    border: 1px solid grey;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
 }
 
 .comp {
     float: right;
-    width: 100px;
-    height: 120px;
-}
+    width: 130px;
+    height: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+} 
+
+.searchButton {
+    width: 40px;
+    height: 34px;
+    border: 1px solid grey;
+    background: white;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    border-left: none;
+  }
+
+  .field {
+    width: 450px;
+    border: 1px solid grey;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .field:focus{
+    color: black;
+  }
+
+  .search {
+
+    position: relative;
+    display: flex;
+  }
+  .wrap{
+    grid-area: field;
+    width: 38%;
+    top: 50%;
+    left: 50%;
+    align-self: center;
+  }
