@@ -22,6 +22,16 @@
     right: 5px;
 }
 
+#feedback {
+    margin-bottom: 0px;
+padding-top: 0px;
+text-align: end;
+}
+
+#feedback small#about {
+    display: inline-block;
+    margin-right: 8px;
+}
 
 .apps {
     grid-area: apps;
@@ -37,7 +47,7 @@
 }
 
 .apps:hover {
-        opacity: 0.85;
+    opacity: 0.85;
 }
 
 .ava {
@@ -48,8 +58,32 @@
     justify-self: end;
 }
 
+ul {
+    margin-top: 8px;
+    position: relative;
+    left: 115px;
+}
+
 ul li {
     display: inline-block;
+    padding: 10px 15px;
+    margin-top: 0px;
+}
+
+ul li.active  {
+    border-bottom: 3px solid blue;
+}
+
+ul li.active a {
+ color: blue;
+}
+
+ul li a {
+    color: grey;
+}
+
+ul li a:hover {
+    color: blue;
 }
 
 a {
@@ -84,11 +118,13 @@ a {
     grid-template: repeat(2, 30px) / 60px repeat(10, 20px) 50px 70px;
   }
 .results {
-    width: 500px;
+    width: 634px;
+    position: relative;
+    left: 150px;
 }
 
 .results .wrap {
-    margin: 40px 0px;
+    margin: 4px 0px 4px 0px;
     box-sizing: border-box;
 }
 
@@ -96,42 +132,107 @@ a {
     margin: 5px 0;
 }
 
+.results .wrap.l {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.results .wrap.l.one {
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
 .snippet {
-    border: 1px solid grey;
+    border: 1px solid hsl(0, 0%, 80%);
     position: relative;
     width: inherit;
+
 }
 
 .also {
     display: grid;
-    grid-template-areas: "a"
-                         "b"
-                         "c"
-                         "d"
-                         "e"
+    grid-template-areas: "a a"
+                         "b down1"
+                         "c down2"
+                         "d down3"
+                         "e down4"
     ;
     grid-template-rows: repeat(5, 44px);
-    border: 1px solid grey;
+    grid-template-columns: 8fr 1fr;
+    border: 0.5px solid hsl(0, 0%, 80%);
+    position: relative;
 }
+
+.also .p {
+    border: 0.5px solid hsl(0, 0%, 80%);
+}
+
+.down.one {
+    grid-area: down1;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    left: 13px;
+    top: 14px;
+}
+
+.down.two {
+    grid-area: down2;
+    align-self: center;
+    justify-self: center;
+    left: 13px;
+    top: 14px;
+    position: relative;
+}
+
+.down.three {
+    grid-area: down3;
+    align-self: center;
+    justify-self: center;
+    left: 13px;
+    top: 14px;
+    position: relative;
+}
+
+.down.four {
+    grid-area: down4;
+    align-self: center;
+    left: 13px;
+    top: 14px;
+    position: relative;
+}
+
+.downarrow {
+    fill: grey;
+}
+
+
 
 .a {
     grid-area: a;
+    align-self: center;
 }
 
 .b {
     grid-area: b;
+    align-self: center;
+
 }
 
 .c {
     grid-area: c;
+    align-self: center;
+
 }
 
 .d {
     grid-area: d;
+    align-self: center;
 }
 
 .e {
     grid-area: e;
+    align-self: center;
 }
 
 .related {
@@ -158,8 +259,7 @@ a {
 
 .rel2 {
     grid-area: rel2;
-}hsl(0, 100%, 50%)
-
+}
 .rel3 {
     grid-area: rel3;
 }
@@ -186,8 +286,8 @@ a {
 
 .comp {
     float: right;
-    width: 130px;
-    height: 150px;
+    width: 200px;
+    height: 230px;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -212,6 +312,7 @@ a {
     fill: #4285f4;
     height: 24px;
     width: 24px;
+    white-space: nowrap;
 }
 
   .field {
